@@ -4,7 +4,7 @@ import View from '../img/view.jpg'
 const ImageThree = () => (
     <Parallax className='image' blur={0} bgImage={View} strength={600} bgImageStyle={{minHeight:"100vh"}}>
         <div className='content' >
-            <span className='img-txt'>a trip to space</span>
+            <span className='img-txt'> I want to see the blogs! </span>
         </div>
     </Parallax>
 );
