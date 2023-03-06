@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path:path.resolve(__dirname, "dist"),
+    path:path.resolve(__dirname, "build"),
   },
   module: {
     rules: [
@@ -25,15 +26,15 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
+        test: /\.(png|ico|jp(e*)g|svg|gif)$/,
         use: [
-          'file-loader',
+          'file-loader?name=/img/[hash].[ext]' ,
           {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 30,
+                quality: 25,
               },
               // optipng.enabled: false will disable optipng
               optipng: {

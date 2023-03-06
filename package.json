@@ -20,11 +20,11 @@
   },
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack",
-    "deploy" : "aws s3 sync dist/ s3://tp.public.test.00",
+    "build": "webpack ",
+    "deploy": "aws s3 sync build/ s3://tp.public.test.00",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prod" : "npm run build && npm run deploy"
+    "prod": "npm run build && npm run deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +51,7 @@
     "image-webpack-loader": "^8.1.0",
     "imagemin": "^8.0.1",
     "imagemin-jpegtran": "^7.0.0",
+    "uglify-js": "^3.17.4",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
